@@ -18,4 +18,4 @@ bot.on('error', err => {
   console.log(err)
 })
 
-bot.login(TOKEN);
+bot.login(token);
