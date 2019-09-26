@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const http = require('http');
-require('dotenv/config')
+require('dotenv/config');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
 const token = process.env.TOKEN;
