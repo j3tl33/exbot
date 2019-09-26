@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+const http = require('http');
+require('dotenv/config')
+const port = process.env.PORT || 3000;
+http.createServer().listen(port);
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
@@ -11,6 +14,8 @@ if(message.content === 'password')
 var role = message.guild.roles.find(role => role.name === "Member");
 message.member.addRole(role);
 })
+bot.on('error', err => {
+  console.log(err)
+})
 
-
-bot.login('NjI2NzUzODEwMTk4NTYwNzY5.XYywpA.0Xe89NuQ7XHgCj_Arm-6RUWQTPM');
+bot.login(process.env.TOKEN);
