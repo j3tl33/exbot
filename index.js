@@ -6,8 +6,6 @@ const port = process.env.PORT || 3000;
 http.createServer().listen(port);
 
 
-bot.on('error', err => {
-  console.log(err)
-})
+
 
 bot.login("NjI2NzUzODEwMTk4NTYwNzY5.XYzN6w.Vev8x9AHrF_EJccM_Zp2alwJL1w");
