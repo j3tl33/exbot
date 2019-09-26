@@ -17,5 +17,5 @@ message.member.addRole(role);
 bot.on('error', err => {
   console.log(err)
 })
-
-bot.login(process.env.TOKEN);
+const token = process.env.TOKEN;
+bot.login(TOKEN);
