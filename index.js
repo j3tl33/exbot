@@ -4,7 +4,7 @@ const http = require('http');
 require('dotenv/config')
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
-
+const token = process.env.TOKEN;
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);
 });
@@ -17,5 +17,5 @@ message.member.addRole(role);
 bot.on('error', err => {
   console.log(err)
 })
-const token = process.env.TOKEN;
+
 bot.login(TOKEN);
